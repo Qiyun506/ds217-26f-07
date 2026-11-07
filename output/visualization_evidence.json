@@ -1,0 +1,40 @@
+{
+  "critique": [
+    {
+      "category": "unsupported claim",
+      "problem": "The title says center based rehab caused better attendence, but the table only shows slight differences between two types of programs, and cannot prove the claim.",
+      "repair": "Use a descriptive title: Attendance rate in home based and center based programs from Q1 to Q2"
+    },
+    {
+      "category": "truncated baseline",
+      "problem": "The y-axis starts at 76%, so center-based's Q2 lead (80% vs 77%) is drawn as a 3 times difference in bar length.",
+      "repair": "Start the y-axis at 0% to accurately represent the differences."
+    },
+    {
+      "category": "missing unit",
+      "problem": "The y axis does not have a unit label. Then the reader cannot understand what the numbers mean.",
+      "repair": "Add a unit label to the y-axis, e.g., 'Percentage' or '%'."
+    },
+    {
+      "category": "color-only encoding",
+      "problem": "The plot use red and green to distinguish the two programs and the patterns and textures are the same. This is not accessible to colorblind readers.",
+      "repair": "Use colorblind poeple friendly colors and add patterns or labels in addition to colors to distinguish the two programs."
+    },
+    {
+      "category": "distracting decoration",
+      "problem": "'Thick black edges, a heavy grid with lines drawn over the bars, and the same dense hatch on every bar carry no data.",
+      "repair": "Drop the edges, lighten the grid and put it behind the bars, hide the top and right spines, and keep hatches only where they mark the program."
+    }
+  ],
+  "question": "How does the share of patients meeting their rehab goal change from visit 1 to visit 4 in the home-based and center-based programs?",
+  "audience": "The rehab program coordinator, who will use the chart to compare how the two programs' goal attainment progresses across follow-up visits.",
+  "intended_claim": "Goal attainment rose in both programs from visit 1 to visit 4, more for center-based than home-based.",
+  "y_measure": "Patients seen at the visit who met their goal (%)",
+  "grain": "One row of the plotting table, and one point on a line, is one program at one follow-up visit number; goal_met_pct is already aggregated from individualpatients seen at that visit, so each point summarizes 44 to 52 patients.",
+  "data_types": {
+    "program": "categorical",
+    "visit_number": "ordinal",
+    "goal_met_pct": "quantitative"
+  },
+  "text_alternative": "Line chart of the percentage of patients meeting the exercise goal (%) at follow-up visits 1 to 4, with one line for the home-based program and one for the center-based program. Both rise across the visits: home-based goes from 58% to 70%, and center-based from 57% to 79%, so the two start almost level and center-based finishes 9 points higher at visit 4 (79% against 70%). These are descriptive program summaries; patients chose their program, so the gap does not show that one program causes more exercise. Each percentage also covers only the patients seen at that visit, about 45 per program, so a 9-point gap could also come from chance or from which patients returned."
+}
