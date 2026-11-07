@@ -7,7 +7,7 @@ The report prints one `PASS` or `FIX` line per check with its points. Before Tas
          output/exploratory_spec.json is missing; run the Task 1.1 cell to write it, then commit it.
 ```
 
-A clean run ends with:
+A clean run ends with: 
 
 ```text
 [PASS]  2/2  text alternative file
